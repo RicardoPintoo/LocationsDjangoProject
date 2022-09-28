@@ -1,0 +1,30 @@
+{% extends 'locations/base/base.html' %}
+
+{% load static %}
+
+
+{% block title %}All My Locations{% endblock %}
+
+{% block site_css %}
+<link rel="stylesheet" href="{% static 'locations/styles/all.css' %}">
+{% endblock %}
+
+{% block main_heading %}
+We got great locations coming up!
+{% endblock %}
+
+{% block header_content %}
+<p>Sign up and Enjoy!</p>
+{% endblock %}
+
+
+{% block body %}
+<section>
+    <h2>Upcoming Locations !</h2>
+    <ol>
+        {% for item in A %}
+            {% include 'locations/includes/item.html' with title=item.title image=item.image.url location=item.description slug=item.slug %}
+        {% endfor %}
+    </ol>
+</section>
+{% endblock %}

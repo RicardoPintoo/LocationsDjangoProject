@@ -1,0 +1,16 @@
+<li class="item">
+    <article>
+        <div class="summary">
+            <div class="image">
+                <img src="{{ image }}" alt="{{ title }}">
+            </div>
+            <div class="details">
+                <h3>{{ title }}</h3>
+                <address>{{ location }}</address>
+            </div>
+        </div>
+        <div class="actions">
+            <a href="{% url 'details' slug %}" class="btn">More Details</a>
+        </div>
+    </article>
+</li>
